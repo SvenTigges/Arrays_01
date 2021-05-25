@@ -2,7 +2,7 @@
 
 /*** 1.0 Arrays */
 
-let arr;
+//let arr;
 //arr = new Array(); // Konstruktor 
 // arr = []; // Literal 
 // arr = [2,6,7,12];
@@ -22,11 +22,82 @@ let arr;
 //     ausgabe(i);
 // }
 
+/* For-Schleige für Array-Index (Iteration)*/
+// let arr = ["ich","bin","Max","Mütze"];
+// for (let i = 0; i < arr.length; i++) 
+// {
+//     ausgabe(arr[i]); 
+// }
 
+/***** Überlegung *****/
 
+/*
+1. Einer Variablen kann Ihr eigner Wert zugewiesen werde. 
+Solange die Variable exisitiert, bleibt dieser erhalten. 
+hier: Aussummierung
+*/
 
+/* Zu "Fu?" -DRY */
+// let a = 0; // Anfangswert
+// ausgabe("Ihnalt von a: " + a);
+// a = a + 1; //a = 0 + 1
+// ausgabe("inhalt von a: " + a); 
+// a = a + 1; // a = 1 + 1
+// ausgabe("Ihnalt von a: " + a);
+// a = a + 1; // a = 2 + 1 
+// ausgabe("Ihnalt von a: " + a);
 
+/* Besser: mit FOR-Schleife */
+// let a = 0; // Anfangswert
+// for (let i = 0; i < 5; i++) {
+//     ausgabe("ausgabe aus der loop :" + a);
+//     a += 1;
+    
+// }
+// ausgabe("ausgabe nach der loop: " + a);
 
+/*
+1. Einer Variablen kann Ihr eigner Wert zugewiesen werde. 
+Solange die Variable exisitiert, bleibt dieser erhalten. 
+hier: Verkettung von Strings / Transponierung 
+*/
+
+// let str = "";  // Anfangswert
+// let addStr = "Test";
+// let gap = " "; 
+// let punct = "."; 
+
+// for (let i = 0; i < 5; i++)
+// {
+//     ausgabe(str += addStr + gap);
+// }
+// ausgabe( str + punct);
+
+/*** 02b. Funktionalität mit Array 2 */
+ausgabe(getSentenceArr2(prompt([]))); // Test //Leerzeichen zwischen allen Buchstaben. (nochmal prüfen)
+ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"])); // Test
+ausgabe(getSentenceArr2(["Ich","bin","der","coole","Max","Mütze"])); // Test
+function getSentenceArr2(arr)
+{   let str = "";  // Anfangswert
+    let gap = " ";
+    let punct = ".";
+    
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (i != arr.length-1) 
+        {
+            str += arr[i] + gap; 
+        } else 
+        {
+            str += arr[i] + punct;
+        }
+    }
+        
+    {
+           return str;
+    }
+    
+}
 
 
 
